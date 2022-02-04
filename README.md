@@ -17,10 +17,10 @@ where:
  * **"my-artifactId"** == my newly created GWT Boot app Maven artifact
  * **"gwt-boot-artifactId"** == possible archetype, see below
 
- # Possible Archetype for GWT Boot
+ ## Possible Archetype for GWT Boot
  * gwt-boot-basic-archetype
 
-# Example
+## Example
 ```
 mvn archetype:generate -DarchetypeGroupId=com.github.gwtboot -DarchetypeArtifactId=gwt-boot-basic-archetype 
 ```
