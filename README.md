@@ -1,5 +1,6 @@
 # GWT Boot Maven Archetypes
-Maven Archetypes for GWT Boot projects. You can generate all the GWT Boot projects with this Maven Archetypes.
+Maven archetypes for GWT Boot projects. You can generate all the GWT Boot projects with this Maven archetypes. 
+All the archetypes are based on [GWT Boot Starters](https://github.com/gwtboot/gwt-boot-modules)
 
 To run the archetypes:
 
