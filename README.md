@@ -12,11 +12,6 @@ mvn archetype:generate
   -DartifactId="my-artifactId"
 ```
 
-Example:
-```
-mvn archetype:generate -DarchetypeGroupId=com.github.gwtboot -DarchetypeArtifactId=gwt-boot-basic-archetype 
-```
-
 where:
  * **"my-groupid"** == my newly created GWT Boot app Maven group
  * **"my-artifactId"** == my newly created GWT Boot app Maven artifact
@@ -25,6 +20,9 @@ where:
  # Possible Archetype for GWT Boot
  * gwt-boot-basic-archetype
 
- 
+# Example
+```
+mvn archetype:generate -DarchetypeGroupId=com.github.gwtboot -DarchetypeArtifactId=gwt-boot-basic-archetype 
+```
 
  
