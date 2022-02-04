@@ -21,13 +21,18 @@
  */
 package ${package}.client;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertTrue;
 
+import com.google.gwtmockito.GwtMockitoTestRunner;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+@RunWith(GwtMockitoTestRunner.class)
 public class AppEntryPointTest {
 
     @Test
-	void test_ok() {
+	public void test_ok() {
         assertTrue(true);
     }
     

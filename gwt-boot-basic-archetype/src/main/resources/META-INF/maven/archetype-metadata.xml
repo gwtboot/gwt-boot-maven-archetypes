@@ -27,6 +27,12 @@
         <include>**/*.java</include>
       </includes>
     </fileSet>
+    <fileSet filtered="false" packaged="false" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>**/*README.md</include>
+      </includes>
+    </fileSet>
   </fileSets>
 
   <requiredProperties>
@@ -34,7 +40,7 @@
       <defaultValue>App</defaultValue>
     </requiredProperty>
     <requiredProperty key="moduleShortName">
-      <defaultValue>${module.toLowerCase()}</defaultValue>
+      <defaultValue>app</defaultValue>
     </requiredProperty>
   </requiredProperties>
 </archetype-descriptor>

@@ -61,7 +61,7 @@
 				<groupId>net.ltgt.gwt.maven</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
 				<configuration>
-					<moduleName>${package}.${moduleShortName}.${module}</moduleName>
+					<moduleName>${package}.${module}</moduleName>
 					<startupUrls>
 						<url>/${moduleShortName}/</url>
 					</startupUrls>
