@@ -19,6 +19,20 @@
         <version>3.2.1</version>
       </extension>
     </extensions>
+
+    <plugins>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.8</version>
+				<extensions>true</extensions>
+				<configuration>
+					<serverId>ossrh</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+				</configuration>
+			</plugin>
+		</plugins>
   </build>
 
   <developers>
@@ -44,10 +58,14 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:gwtboot/gwt-boot-modules.git/gwt-boot-dependencies/gwt-boot-starter-parent/gwt-boot-sample-basic</connection>
-    <developerConnection>scm:git:git@github.com:gwtboot/gwt-boot-modules.git/gwt-boot-dependencies/gwt-boot-starter-parent/gwt-boot-sample-basic</developerConnection>
-    <url>scm:git:git@github.com:gwtboot/gwt-boot-modules.git/gwt-boot-dependencies/gwt-boot-starter-parent/gwt-boot-sample-basic</url>
-  </scm>
+		<connection>
+			scm:git:git@github.com:gwtboot/gwt-boot-maven-archetypes.git
+		</connection>
+		<developerConnection>
+			scm:git:git@github.com:gwtboot/gwt-boot-maven-archetypes.git
+		</developerConnection>
+		<url>scm:git:git@github.com:gwtboot/gwt-boot-maven-archetypes.git</url>
+	</scm>
 
   <distributionManagement>
     <repository>
@@ -60,4 +78,80 @@
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
+
+  <profiles>
+		<profile>
+			<id>release</id>
+			<activation>
+				<property>
+					<name>performRelease</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.6</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>3.2.0</version>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar-no-fork</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>attach-test-sources</id>
+								<goals>
+									<goal>test-jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>3.2.0</version>
+						<executions>
+							<execution>
+								<id>attach-javadocs</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<failOnError>false</failOnError>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-release-plugin</artifactId>
+						<version>2.5.3</version>
+						<configuration>
+							<autoVersionSubmodules>true</autoVersionSubmodules>
+							<useReleaseProfile>false</useReleaseProfile>
+							<releaseProfiles>release</releaseProfiles>
+							<goals>deploy</goals>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
