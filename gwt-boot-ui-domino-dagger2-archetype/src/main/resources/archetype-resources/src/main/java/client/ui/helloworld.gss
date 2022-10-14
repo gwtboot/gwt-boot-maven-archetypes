@@ -1,0 +1,14 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+/** Add css rules here for your application. */
+
+.addButton {
+    min-width: 120px !important;
+}
+
+.doneButton {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+}
