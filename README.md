@@ -22,7 +22,7 @@ where:
  * gwt-boot-basic-archetype
  * gwt-boot-ui-domino-dagger2
 
-## Example
+## Examples
 ```
 mvn archetype:generate -DarchetypeGroupId=com.github.gwtboot -DarchetypeArtifactId=gwt-boot-basic-archetype 
 
