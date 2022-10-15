@@ -29,8 +29,8 @@ mvn archetype:generate -DarchetypeGroupId=com.github.gwtboot -DarchetypeArtifact
 mvn archetype:generate -DarchetypeGroupId=com.github.gwtboot -DarchetypeArtifactId=gwt-boot-ui-domino-dagger2-archetype
 ```
 
-Following properties must be given: 
-- *groupId*
-- *artifactId* 
-- *version* 
-- *package*
+Following properties must be given (please use Maven standard): 
+- *groupId*: example: *com.test.order*
+- *artifactId*: example: *company-order*
+- *version*: *1.0-SNAPSHOT* as a standard value
+- *package*: the groupId as a standard value: *com.test.order*
