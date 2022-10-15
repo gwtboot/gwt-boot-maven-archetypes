@@ -24,9 +24,11 @@ where:
 
 ## Examples
 ```
-mvn archetype:generate -DarchetypeGroupId=com.github.gwtboot -DarchetypeArtifactId=gwt-boot-basic-archetype 
+mvn archetype:generate -DarchetypeGroupId=com.github.gwtboot 
+  -DarchetypeArtifactId=gwt-boot-basic-archetype 
 
-mvn archetype:generate -DarchetypeGroupId=com.github.gwtboot -DarchetypeArtifactId=gwt-boot-ui-domino-dagger2-archetype
+mvn archetype:generate -DarchetypeGroupId=com.github.gwtboot 
+  -DarchetypeArtifactId=gwt-boot-ui-domino-dagger2-archetype
 ```
 
  
