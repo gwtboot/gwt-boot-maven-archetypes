@@ -33,4 +33,4 @@ Following properties must be given (please use Maven standard):
 - *groupId*: example: *com.test.order*
 - *artifactId*: example: *company-order*
 - *version*: *1.0-SNAPSHOT* as a standard value
-- *package*: the groupId as a standard value: *com.test.order*
+- *package*: the groupId as a standard value: example: *com.test.order*
