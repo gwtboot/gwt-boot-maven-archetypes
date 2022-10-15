@@ -13,6 +13,8 @@
   <version>1.0.0</version>
   <packaging>maven-archetype</packaging>
   <name>gwt-boot-ui-domino-dagger2-archetype</name>
+  <url>https://github.com/gwtboot/gwt-boot-maven-archetypes</url>
+	<description>GWT Boot Maven Archetypes - DominoUI Dagger2</description>
 
   <build>
     <extensions>
